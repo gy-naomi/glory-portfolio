@@ -1,36 +1,48 @@
-/* Base Reset */
+/* ================= BASE ================= */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: #F5F6F8;
     color: #1F2A44;
+    scroll-behavior: smooth;
 }
 
-/* Hero Section */
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= HERO ================= */
 .hero {
     text-align: center;
     padding: 120px 20px;
+    background: linear-gradient(135deg, #F5F6F8, #EEF2F7);
 }
 
 .hero h1 {
     font-size: 48px;
-    margin-bottom: 10px;
+    color: #1F2A44;
 }
 
-.hero p {
+.hero p.subtitle {
     font-size: 18px;
-    margin: 5px 0;
+    color: #1F2A44;
+    margin-top: 8px;
 }
 
-.tagline {
+.hero .tagline {
+    font-size: 16px;
     color: #A78BFA;
     font-weight: 600;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
-/* Hero Buttons */
 .buttons {
     margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .btn {
@@ -38,67 +50,57 @@ body {
     padding: 12px 28px;
     border-radius: 6px;
     font-weight: 600;
-    margin: 0 8px;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-/* Primary Button */
 .btn.primary {
-    background-color: #1F2A44; /* deep navy */
+    background-color: #1F2A44;
     color: #ffffff;
 }
 
-/* Secondary Button */
+.btn.primary:hover {
+    background-color: #D4A373;
+    color: #1F2A44;
+    transform: translateY(-2px);
+}
+
 .btn.secondary {
-    background-color: #F5F6F8; /* light grey */
+    background-color: #F5F6F8;
     color: #1F2A44;
     border: 2px solid #1F2A44;
 }
 
-/* Button Hover Effects */
-.btn.primary:hover {
-    background-color: #D4A373; /* soft gold accent */
-    color: #1F2A44;
-}
-
 .btn.secondary:hover {
-    background-color: #A78BFA; /* muted lavender */
+    background-color: #A78BFA;
     color: #ffffff;
+    transform: translateY(-2px);
 }
 
-/* About Section */
-.about {
-    max-width: 800px;
-    margin: auto;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.about h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #1F2A44;
-}
-
-/* Skills Section */
-.skills {
+/* ================= SECTIONS ================= */
+section {
     max-width: 900px;
     margin: auto;
     padding: 80px 20px;
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1F2A44;
+    border-bottom: 2px solid #A78BFA;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #1F2A44;
     text-align: center;
 }
 
-.skills h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-/* Grid for skill categories */
+/* ================= SKILLS ================= */
 .skill-grid {
     display: flex;
     flex-wrap: wrap;
@@ -128,22 +130,9 @@ body {
     margin-bottom: 6px;
 }
 
-/* Projects Section */
-.projects {
-    max-width: 900px;
-    margin: auto;
-    padding: 80px 20px;
-}
-
-.projects h2 {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-/* Individual project cards */
+/* ================= PROJECTS ================= */
 .project {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 25px 20px;
     margin-bottom: 25px;
     border-radius: 10px;
@@ -163,26 +152,12 @@ body {
     color: #1F2A44;
 }
 
-/* Hover effect */
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* Certifications Section */
-.certifications {
-    max-width: 900px;
-    margin: auto;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.certifications h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-/* Grid for certifications */
+/* ================= CERTIFICATIONS ================= */
 .cert-grid {
     display: flex;
     flex-wrap: wrap;
@@ -191,7 +166,7 @@ body {
 }
 
 .cert {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 18px 15px;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
@@ -205,57 +180,28 @@ body {
     box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
-/* YouTube Section */
-.youtube {
-    max-width: 800px;
-    margin: auto;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.youtube h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
+/* ================= YOUTUBE ================= */
 .youtube p {
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    color: #1F2A44;
-}
-
-/* Contact Section */
-.contact {
-    max-width: 800px;
-    margin: auto;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 32px;
     margin-bottom: 25px;
 }
 
+/* ================= CONTACT ================= */
 .contact p {
-    font-size: 18px;
-    line-height: 1.8;
     margin-bottom: 12px;
 }
 
 .contact a {
-    color: #A78BFA; /* muted lavender accent */
+    color: #A78BFA;
     text-decoration: none;
     font-weight: 600;
 }
 
 .contact a:hover {
-    color: #D4A373; /* soft gold hover */
+    color: #D4A373;
     text-decoration: underline;
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -264,80 +210,19 @@ footer {
     color: #1F2A44;
 }
 
-
-
-/* Responsive Design */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p.subtitle {
-        font-size: 16px;
-    }
-
-    .hero .tagline {
-        font-size: 14px;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .btn {
-        width: 80%;
-        text-align: center;
-    }
-
-    .skill-grid {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .cert-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .project {
-        padding: 20px 15px;
-    }
+    .hero h1 { font-size: 36px; }
+    .hero p.subtitle { font-size: 16px; }
+    .hero .tagline { font-size: 14px; }
+    .buttons { flex-direction: column; gap: 12px; }
+    .btn { width: 80%; text-align: center; }
+    .skill-grid, .cert-grid { flex-direction: column; gap: 30px; }
+    .project { padding: 20px 15px; }
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero p.subtitle, .hero .tagline {
-        font-size: 14px;
-    }
-
-    .about p, .skills p, .projects p, .cert p, .youtube p, .contact p {
-        font-size: 16px;
-    }
+    .hero h1 { font-size: 28px; }
+    .hero p.subtitle, .hero .tagline { font-size: 14px; }
+    p { font-size: 16px; }
 }
-
-/* Buttons already have hover, refine slightly */
-.btn {
-    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-/* Links subtle underline on hover */
-a {
-    transition: color 0.3s ease, text-decoration 0.2s ease;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-section {
-    border-bottom: 1px solid #E5E7EB; /* very light gray */
-}
-
