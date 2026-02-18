@@ -27,3 +27,146 @@ body {
     font-weight: 600;
     margin-top: 15px;
 }
+
+/* Hero Buttons */
+.buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin: 0 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Primary Button */
+.btn.primary {
+    background-color: #1F2A44; /* deep navy */
+    color: #ffffff;
+}
+
+/* Secondary Button */
+.btn.secondary {
+    background-color: #F5F6F8; /* light grey */
+    color: #1F2A44;
+    border: 2px solid #1F2A44;
+}
+
+/* Button Hover Effects */
+.btn.primary:hover {
+    background-color: #D4A373; /* soft gold accent */
+    color: #1F2A44;
+}
+
+.btn.secondary:hover {
+    background-color: #A78BFA; /* muted lavender */
+    color: #ffffff;
+}
+
+/* About Section */
+.about {
+    max-width: 800px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #1F2A44;
+}
+
+/* Skills Section */
+.skills {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Grid for skill categories */
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.skill-category {
+    flex: 1 1 250px;
+    text-align: left;
+}
+
+.skill-category h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #1F2A44;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding-left: 0;
+    color: #1F2A44;
+    font-size: 16px;
+}
+
+.skill-category li {
+    margin-bottom: 6px;
+}
+
+/* Projects Section */
+.projects {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.projects h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Individual project cards */
+.project {
+    background-color: #FFFFFF;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #1F2A44;
+}
+
+.project p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1F2A44;
+}
+
+/* Hover effect */
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+
