@@ -264,3 +264,80 @@ footer {
     color: #1F2A44;
 }
 
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p.subtitle {
+        font-size: 16px;
+    }
+
+    .hero .tagline {
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 80%;
+        text-align: center;
+    }
+
+    .skill-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cert-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p.subtitle, .hero .tagline {
+        font-size: 14px;
+    }
+
+    .about p, .skills p, .projects p, .cert p, .youtube p, .contact p {
+        font-size: 16px;
+    }
+}
+
+/* Buttons already have hover, refine slightly */
+.btn {
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Links subtle underline on hover */
+a {
+    transition: color 0.3s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    border-bottom: 1px solid #E5E7EB; /* very light gray */
+}
+
