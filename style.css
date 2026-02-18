@@ -169,4 +169,98 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
+/* Certifications Section */
+.certifications {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.certifications h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Grid for certifications */
+.cert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cert {
+    background-color: #FFFFFF;
+    padding: 18px 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    font-size: 16px;
+    min-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* YouTube Section */
+.youtube {
+    max-width: 800px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.youtube h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.youtube p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #1F2A44;
+}
+
+/* Contact Section */
+.contact {
+    max-width: 800px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.contact p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.contact a {
+    color: #A78BFA; /* muted lavender accent */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact a:hover {
+    color: #D4A373; /* soft gold hover */
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #F5F6F8;
+    font-size: 14px;
+    color: #1F2A44;
+}
 
