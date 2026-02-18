@@ -1,0 +1,29 @@
+/* Base Reset */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F6F8;
+    color: #1F2A44;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.tagline {
+    color: #A78BFA;
+    font-weight: 600;
+    margin-top: 15px;
+}
