@@ -52,8 +52,60 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     // Activate SimpleLightbox plugin for portfolio items
-    new SimpleLightbox({
-        elements: '#portfolio a.portfolio-box'
+    // new SimpleLightbox({        elements: '#portfolio a.portfolio-box'    });
+
+    const projectModal = document.getElementById('projectModal');
+
+    if (projectModal) {
+    projectModal.addEventListener('show.bs.modal', function (event) {
+
+        const button = event.relatedTarget;
+
+        const title = button.getAttribute('data-title');
+        const description = button.getAttribute('data-description');
+        const tools = button.getAttribute('data-tools');
+        const image = button.getAttribute('data-image');
+        const link = button.getAttribute('data-link');
+        const buttonText = button.getAttribute('data-button');
+
+        document.getElementById('modalTitle').textContent = title;
+        document.getElementById('modalDescription').textContent = description;
+        document.getElementById('modalTools').textContent = tools;
+        document.getElementById('modalImage').src = image;
+
+        const modalButton = document.getElementById('modalButton');
+        modalButton.href = link;
+        modalButton.textContent = buttonText;
+
     });
+    }
+
+    // =====================
+// Portfolio Filtering
+// =====================
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', function () {
+
+    // Remove active state
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    this.classList.add('active');
+
+    const filterValue = this.getAttribute('data-filter');
+
+    portfolioItems.forEach(item => {
+      if (filterValue === 'all' || item.dataset.category === filterValue) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+  });
+});
+
 
 });
